@@ -13,6 +13,12 @@
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <nav id="navbar">
+        <li id="logo"><img src="{{ asset('assets/images/logo.png') }}" alt="logo"/></li>
+        <li id="site">NicoProduct</li>
+        <li id="liste">Liste des produits</li>
+    </nav>
     <body>
         {% block body %}{% endblock %}
     </body>
