@@ -73,8 +73,13 @@ body h2{
     width: 600px;
 }
 
-.box{
-    border: 2px solid blue;
+.box:nth-child(even){
+    background-color: rgb(178, 204, 238);
+    height: 100px;
+}
+
+.box:nth-child(odd){
+    background-color: rgb(255, 255, 216);
     height: 100px;
 }
 
