@@ -1,0 +1,21 @@
+#container-product{
+    margin-top: 2%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 600px;
+    margin-left: 20%;
+}
+
+.box-product{
+    height: 10%;
+}
+
+.box-product:nth-child(even){
+    background-color: rgba(30, 143, 255, 0.4);
+}
+
+.box-product:nth-child(odd){
+    background-color: rgb(255, 215, 0, 0.5);
+}

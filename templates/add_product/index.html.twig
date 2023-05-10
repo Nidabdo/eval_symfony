@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit index{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('assets/css/product.css') }}">
+    <h1>Produit index</h1>
+    <a href="{{ path('app_add_product_new') }}">Ajouter un produit</a>
+    <div id="container-product">
+        {% for produit in produits %}
+        <div class="box-product">
+            {{ produit.id }}
+            {{ produit.nom }}
+            {{ produit.description }}
+            {{ produit.image }}
+            {{ produit.stock }}
+            <a href="{{ path('app_add_product_show', {'id': produit.id}) }}">show</a>
+            <a href="{{ path('app_add_product_edit', {'id': produit.id}) }}">edit</a>
+        </div>
+        {% else %}
+        <div>Pas de produit</div>
+        {% endfor %}
+    </div>
+{% endblock %}

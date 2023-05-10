@@ -1,0 +1,25 @@
+body h2{
+    margin-top: 3%;
+    text-align: center;
+}
+
+#container-last-product{
+    margin-top: 3%;
+    height: 500px;
+    width: 600px;
+}
+
+.box-last-product:nth-child(even){
+    background-color: rgba(30, 143, 255, 0.4);
+    height: 100px;
+}
+
+.box-last-product:nth-child(odd){
+    background-color: rgb(255, 215, 0, 0.5);
+    height: 100px;
+}
+
+#center{
+    display: flex;
+    justify-content: center;
+}

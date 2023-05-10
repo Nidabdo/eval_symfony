@@ -19,7 +19,7 @@ button {
  cursor: pointer;
 }
 
-/* Nav bar */
+/* Header base*/
 
 nav li{
     list-style: none;
@@ -27,11 +27,10 @@ nav li{
 
 nav li#logo{
     margin-left: 5%;
+    width: 9%;
 }
 
 nav li#site{
-    position: absolute;
-    width: 100%;
     text-align: center;
     color: rgb(255, 215, 0);
     font-weight: bold;
@@ -42,6 +41,7 @@ nav li#site{
 
 nav li#liste{
     margin-right: 5%;
+    width: 9%;
 }
 
 nav li img{
@@ -57,35 +57,11 @@ nav#navbar{
     align-items: center;
     height: 10vh;
     background-color: rgb(30,144,255);
+    z-index: 1;
 }
 
-/* Body */
-
-body h2{
-    margin-top: 3%;
-    text-align: center;
+#liste a{
+    text-decoration: none;
+    color: rgb(255, 215, 0);
+    font-weight: bold;
 }
-
-#container{
-    margin-top: 3%;
-    border: 2px solid black;
-    height: 500px;
-    width: 600px;
-}
-
-.box:nth-child(even){
-    background-color: rgb(178, 204, 238);
-    height: 100px;
-}
-
-.box:nth-child(odd){
-    background-color: rgb(255, 255, 216);
-    height: 100px;
-}
-
-#center{
-    display: flex;
-    justify-content: center;
-}
-
-
