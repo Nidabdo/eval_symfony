@@ -1,3 +1,5 @@
+/* Liste des produits */
+
 #container-product{
     margin-top: 2%;
     border: 2px solid black;
@@ -10,6 +12,9 @@
 
 .box-product{
     height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .box-product:nth-child(even){
@@ -18,4 +23,39 @@
 
 .box-product:nth-child(odd){
     background-color: rgb(255, 215, 0, 0.5);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h2{
+    text-align: center;
+    margin-top: 3%;
+    color:rgb(30,144,255)
+}
+
+.box-product img{
+    width: 30px;
+    height: auto;
+}
+
+#center{
+    display: flex;
+    justify-content: center;
+}
+
+#center a{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 215, 0);
+}
+
+span{
+    color: rgb(30,144,255);
+}
+
+/* show */
+
+.tabble{
+    display: flex;
+    justify-content: center;
 }

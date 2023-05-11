@@ -3,13 +3,12 @@
 {% block title %}Produit{% endblock %}
 
 {% block body %}
-    <h1>Produit</h1>
-
+<link rel="stylesheet" href="{{ asset('assets/css/product.css') }}">
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ produit.id }}</td>
+                <th>Image</th>
+                <td>{{ produit.image }}</td>
             </tr>
             <tr>
                 <th>Nom</th>
@@ -18,10 +17,6 @@
             <tr>
                 <th>Description</th>
                 <td>{{ produit.description }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ produit.image }}</td>
             </tr>
             <tr>
                 <th>Stock</th>
