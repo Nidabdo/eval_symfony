@@ -1,9 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductController!{% endblock %}
+{% block title %}Product{% endblock %}
 
 {% block body %}
     <link rel="stylesheet" href="{{ asset('assets/css/product.css') }}">
-    <h2>Ajouter un commentaire</h2>
-
+    <h2>Liste des produits</h2>
+    <div id="center">
+        <a href="{{ path('app_product_new') }}"><span>></span>Ajouter un produit<span><</span></a>
+    </div>
+    <table align="center">
+        <tr>
+            <th>Photo</th>
+            <th>Nom</th>
+            <th>Stock</th>
+            <th>Voir</th>
+            <th>modifier</th>
+		</tr>
+        {% for produit in produits %}
+        <tr>
+            <td><img src= "/assets/images/produits/{{produit.image}}"  alt="{{ produit.nom }}"/></td>
+            <td>{{ produit.nom }}</td>
+            <td>{{ produit.stock }}</td>
+            <td><a href="{{ path('app_product_show', {'id': produit.id}) }}"><img src="{{ asset('assets/images/show.png') }}" alt="show"/></a></td>
+            <td><a href="{{ path('app_product_edit', {'id': produit.id}) }}"><img src="{{ asset('assets/images/edit-button.png') }}" alt="edit"/></a></td>
+        {% else %}
+        <div id="no-product">Pas de produit</div> 
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

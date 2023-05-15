@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ asset('assets/css/product-show.css') }}">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td><img src= "/assets/images/produits/{{produit.image}}"  alt="{{ produit.nom }}"/></td>
+            </tr>
+            <tr>
+                <td>{{ produit.nom }}</td>
+            </tr>
+            <tr>
+                <td>{{ produit.description }}</td>
+            </tr>
+            <tr>
+                <td>Stock:{{ produit.stock }}</td>
+            </tr>
+            <tr>
+                <td><a href="{{ path('app_product_index') }}">Retour à la liste des produits</a></td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
