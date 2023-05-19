@@ -3,7 +3,7 @@
 {% block title %}Commentaire index{% endblock %}
 
 {% block body %}
-    <h1>Commentaire index</h1>
+    <h1>Commentaire</h1>
 
     <table class="table">
         <thead>
@@ -27,11 +27,11 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">Aucun commentaire</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_commentaire_new') }}">Create new</a>
+    <a href="{{ path('app_commentaire_new') }}">Ajouter un commentaire</a>
 {% endblock %}

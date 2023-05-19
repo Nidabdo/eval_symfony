@@ -5,16 +5,8 @@
 {% block body %}
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
     <h2>Bienvenue sur NicoProduct</h2>
-    <div id="center">
-        <div id="container-last-product">
-            <div class="box-last-product"></div>
-            <div class="box-last-product"></div>
-            <div class="box-last-product"></div>
-            <div class="box-last-product"></div>
-            <div class="box-last-product"></div>
-            {# {% for i in 1..5 %}
-                <p>{{ produit.nom }}</p>
-            {% endfor %} #}
-        </div>
-    </div>
+    {% for produit in produits %}
+    <h2>{{ produit.nom }}</h2>
+{% endfor %}
+
 {% endblock %}
